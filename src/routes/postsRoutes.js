@@ -15,7 +15,7 @@ const storage = multer.diskStorage({
   },
 });
 
-const upload = multer({ dest: "./uploads" });
+const upload = multer({ storage: storage });
 
 const routes = (app) => {
   app.use(express.json());
